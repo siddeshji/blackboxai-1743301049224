@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Stars - XSTARS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .star-card {
+            transition: all 0.2s ease;
+        }
+        .star-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="mr-4 text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <i class="fas fa-star text-indigo-600 text-xl mr-2"></i>
+                    <span class="text-xl font-semibold text-gray-900">XSTARS</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search stars..." 
+                               class="pl-10 pr-4 py-2 border rounded-lg w-64 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                    </div>
+                    <a href="auth/login.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700">
+                        Sign In
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-900">Top Adult Stars</h1>
+            <div class="flex space-x-4">
+                <select class="border rounded-md px-3 py-1 text-sm">
+                    <option>Sort by Popularity</option>
+                    <option>Newest First</option>
+                    <option>Most Videos</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <!-- Star Card 1 -->
+            <a href="#" class="star-card bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="relative">
+                    <img src="https://via.placeholder.com/300x450" alt="Star Name" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <span class="text-white font-medium">1.2M Followers</span>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Star Name 1</h3>
+                    <div class="flex justify-between text-sm text-gray-600 mt-1">
+                        <span>120+ Videos</span>
+                        <span class="flex items-center">
+                            <i class="fas fa-heart text-red-500 mr-1"></i>
+                            85K
+                        </span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- 19 more star cards would follow same pattern -->
+            <!-- Each with unique placeholder image, name, and stats -->
+        </div>
+
+        <div class="mt-12 flex justify-center">
+            <button class="bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 flex items-center">
+                <i class="fas fa-sync-alt mr-2"></i>
+                Load More Stars
+            </button>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t mt-12 py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
+            &copy; 2023 XSTARS. All adult content is restricted to viewers 18+ years old.
+        </div>
+    </footer>
+</body>
+</html>
